@@ -1,9 +1,15 @@
-#include <stdio.h>
-#include <stdlib.h>
+#ifndef BUREAUVOTE_H_INCLUDED
+#define BUREAUVOTE_H_INCLUDED
 
 typedef struct
 {
-char adresse[20];
-int capacite, salle,id_bureau,id_agent;
-}Bureau_vote;
+int id_bureau, capacite, id_agent;
+char adresse [20];
+}Bureau;
 
+int ajouter_bv(Bureau b , char filename []);
+int modifier_bv(int id_bureau, Bureau nouv, char * filename);
+int supprimer_bv(int id_bureau, char * filename);
+Bureau chercher_bv(int id_bureau, char * filename);
+
+#endif // BUREAUVOTE_H_INCLUDED

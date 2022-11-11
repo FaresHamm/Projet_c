@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#include "Election.h"
+#include "election.h"
 
 int main()
 {
@@ -22,7 +22,7 @@ int main()
     else
         printf("\nechec Suppression");
     p3=chercher("Election.txt",3 );
-    if(p3.municipalité==NULL)
+    if(p3.municipalite==NULL)
         printf("introuvable");
     return 0;
 }

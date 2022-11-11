@@ -7,7 +7,7 @@ int ajouter(char * filename, Utilisateur p )
     FILE * f=fopen(filename, "a");
     if(f!=NULL)
     {
-        fprintf(f,"%d %s %s %s %d %d %d %d %d %d\n",&p.id_user,p.nom,p.prenom,p.mdp,&p.vote,&p.role,&p.id_bv,&p.date.jj,&p.date.mm,&p.date.aa);
+        fprintf(f,"%d %s %s %s %d %d %d %d %d %d\n",p.id_user,p.nom,p.prenom,p.mdp,p.vote,p.role,p.id_bv,p.date.jj,p.date.mm,p.date.aa);
         fclose(f);
         return 1;
     }
@@ -25,11 +25,11 @@ int modifier( char * filename, int id, Utilisateur nouv )
         {
             if(p.id_user== id)
             {
-                fprintf(f2,"%d %s %s %s %d %d %d %d %d %d\n",&nouv.id_user,nouv.nom,nouv.prenom,nouv.mdp,&nouv.vote,&nouv.role,&nouv.id_bv,&nouv.date.jj,&nouv.date.mm,&nouv.date.aa);
+                fprintf(f2,"%d %s %s %s %d %d %d %d %d %d\n",nouv.id_user,nouv.nom,nouv.prenom,nouv.mdp,nouv.vote,nouv.role,nouv.id_bv,nouv.date.jj,nouv.date.mm,nouv.date.aa);
                 tr=1;
             }
             else
-                fprintf(f2,"%d %s %s %s %d %d %d %d %d %d\n",&p.id_user,p.nom,p.prenom,p.mdp,&p.vote,&p.role,&p.id_bv,&p.date.jj,&p.date.mm,&p.date.aa);
+                fprintf(f2,"%d %s %s %s %d %d %d %d %d %d\n",p.id_user,p.nom,p.prenom,p.mdp,p.vote,p.role,p.id_bv,p.date.jj,p.date.mm,p.date.aa);
 
         }
     }
@@ -53,7 +53,7 @@ int supprimer(char * filename, int id)
             if(p.id_user==id)
                 tr=1;
             else
-                fprintf(f2,"%d %s %s %s %d %d %d %d %d %d\n",&p.id_user,p.nom,p.prenom,p.mdp,&p.vote,&p.role,&p.id_bv,&p.date.jj,&p.date.mm,&p.date.aa);
+                fprintf(f2,"%d %s %s %s %d %d %d %d %d %d\n",p.id_user,p.nom,p.prenom,p.mdp,p.vote,p.role,p.id_bv,p.date.jj,p.date.mm,p.date.aa);
         }
     }
     fclose(f);

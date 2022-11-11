@@ -35,7 +35,7 @@ int modifier( char * filename, int id, Utilisateur nouv )
     }
     fclose(f);
     fclose(f2);
-    remove(list);
+    remove(filename);
     rename("nouv.txt", filename);
     return tr;
 
